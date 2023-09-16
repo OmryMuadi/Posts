@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block head %}Upload a new image{% endblock %}
+
+{% block body %}
+<form method="POST" action="" enctype="multipart/form-data" class="text-center">
+    <h2>Upload an image</h2>
+    {% csrf_token %}
+    {{form.as_p}}    
+    <div>
+        <button type="submit" class="btn btn-success">Submit form</button>
+    </div>
+</form>
+{% endblock %}
